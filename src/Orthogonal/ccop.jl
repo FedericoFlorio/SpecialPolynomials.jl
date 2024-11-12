@@ -558,7 +558,7 @@ function Polynomials.integrate(p::P) where {P<:AbstractCOP}
     if n == -1
         return zero(Q)
     elseif n == 0
-        return C * one(Q) + p(0) * variable(Q)
+        return p(0) * variable(Q)
     end
 
     as = zeros(R, n + 2)
